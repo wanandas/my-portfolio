@@ -11,27 +11,39 @@ class Header extends React.Component {
         return(
             <div className='header'>
                 <div className='container' >
-                    <div className='logo-container' to='/'>
-                        <Logo className='logo' />
+                    <div className='logo-container' >
+                        <Logo className='logo' to='headerSection' />
                     </div>
                     <div className='options'>
+
                         <Link className='option' 
-                        to="headerSection" 
+                            to="headerSection" 
                             spy={true} 
                             smooth={true} 
                             duration={500} >
                             home
-                        </Link>
-                        <div className='option' >
+                         </Link>  
+
+                         <Link className='option' 
+                            to="aboutSection" 
+                            spy={true} 
+                            smooth={true} 
+                            duration={500} >
                             about
-                        </div>
-                        <div className='option' >
-                            Skills
-                        </div>
+                        </Link>
                         
-                    </div>    
+                        <Link className='option' 
+                            to="aboutSection" 
+                            spy={true} 
+                            smooth={true} 
+                            duration={500} >
+                            Skills
+                        </Link>
+
+                        
                 </div>
             </div>
+        </div>
     )}
 } 
 

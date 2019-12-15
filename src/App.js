@@ -8,9 +8,9 @@ import Aboutsection from './components/about/about.component';
 function App() {
   return (
     <div className="App">
-    
-      <Homesection  />
+      
       <Header />
+      <Homesection  />
       <Aboutsection />
       
     
