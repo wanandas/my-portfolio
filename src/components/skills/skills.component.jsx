@@ -1,25 +1,13 @@
-import React from 'react'
+import React from "react";
 
-import './skills.styles.scss'
+import "./skills.styles.scss";
 
-const ProjectsSection = () => (
-    <div className='projects-Section'>
-        <div className="flex">
-            <div className="col">
-                <h2>React Project</h2>
-                <p>Some description</p>
-            </div>
-            <div className="col">
-                <h2>Javascript Project</h2>
-                <p>Some description</p>
-            </div>
-            <div className="col">
-                <h2>LandingPage Project</h2>
-                <p>Some description</p>
-            </div>
-	    </div>
-    </div>
-        
-)
+const SkillsSection = () => (
+  <div className="skills-section">
+    <hr></hr>
+    <h2 className="title">Skills</h2>
+    <div className="skills-container"></div>
+  </div>
+);
 
-export default ProjectsSection 
+export default SkillsSection;

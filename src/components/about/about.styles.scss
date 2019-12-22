@@ -1,42 +1,51 @@
-.about-container {
-    display: inline-block;
-    margin-top: 0;
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 110px;
+  background: rgb(15, 15, 15);
+  color: #fff;
+
+  .section-title {
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  ul.about-content {
     width: 100%;
-    height: 100vh;
-    background-color: #eee;
-    text-align: center;
-    
-    h1 {
-        margin-top: 0; 
-        font-size: 50px;
-        color: #FBB902;
-        background-color: rgb(59, 59, 59);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-content: center;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+
+    li {
+      padding: 10px;
+      height: 450px;
+      list-style: none;
     }
-    
-    .container-image-name {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-        .my-pic {  
-            margin-top: 20px;
-            height: 15em;
-            width: 15em;
-        } 
-        
-        h2 { 
-            display: flex;
-            background-color: #01AFCC;
-            color: #eee;
-        }
+  }
+
+  .about-left {
+    margin: 20px 40px;
+    border-radius: 20px 20px;
+    box-shadow: 12px 12px 2px 1px rgba(255, 255, 255, 0.2);
+    background: center no-repeat
+      url("https://scontent.fbkk3-1.fna.fbcdn.net/v/t31.0-8/s960x960/14324523_1206769182718466_2462830630592720483_o.jpg?_nc_cat=101&_nc_eui2=AeHdj-Z81i-xTMBctcCG2Xxb3KZxVCIx9xzKMGHoTOK0RDWPhfVr5D--nf96uOex9eQlsBkBI9FOV5MnEEAIRxwunaG8fgjMJpMid07MCl34WQ&_nc_oc=AQlb5t_z_vxpbfDnGDIyQT4zgmG9omvKq576ei3MbGkejLfPFMwmbYN-GicYJ_2bnSY&_nc_ht=scontent.fbkk3-1.fna&oh=2d2219935aac5041a3bd10a5c86fc4aa&oe=5E75B86C");
+  }
+
+  .about-right {
+    padding: 20px;
+
+    h3 {
+      font-size: 30px;
     }
-    
-    .contain-p{
-        display:  flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-        p {
-            line-height: 1.5em; 
-        }
+    p {
+      text-align: start;
+      font-size: 25px;
     }
+  }
 }
