@@ -5,7 +5,8 @@ import Homesection from "./components/homesections/home.components";
 import Header from "./components/header/header.component";
 import Aboutsection from "./components/about/about.component";
 import SkillsSection from "./components/skills/skills.component";
-import Projectsection from "./components/project/project.component";
+import ProjectsSection from "./components/project/project.component";
+import FooterSection from "./components/footer/footer.component";
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
       <Homesection />
       <Aboutsection />
       <SkillsSection />
+      <ProjectsSection />
+      <FooterSection />
     </div>
   );
 }

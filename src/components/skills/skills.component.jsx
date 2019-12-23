@@ -3,7 +3,7 @@ import React from "react";
 import "./skills.styles.scss";
 
 const SkillsSection = () => (
-  <div className="skills-section">
+  <div className="skills-section" name="skillsSection">
     <hr></hr>
     <h2 className="title">My Skill</h2>
     <div className="skills-container">

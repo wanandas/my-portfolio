@@ -47,7 +47,7 @@ class Header extends React.Component {
 
             <Link
               className="option"
-              to="projectSection"
+              to="projectsSection"
               spy={true}
               smooth={true}
               duration={500}

@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgb(15, 15, 15);
+  color: white;
+  flex-direction: column;
+  padding-top: 50px;
+  height: 100%;
+
+  hr {
+    width: 70%;
+    margin-bottom: 30px;
+  }
+  .contain-footer {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+
+    .fa-facebook {
+      color: #3b5998;
+      margin-left: 20px;
+    }
+    .fa-instagram {
+      color: #c13584;
+      margin-left: 20px;
+    }
+    .fa-github {
+      color: white;
+      margin-left: 20px;
+    }
+  }
+}
