@@ -48,17 +48,16 @@
 
 @media (max-width: 700px) {
   .header {
-    position: absolute;
-
     .container {
-      justify-content: center;
-      font-size: 1em;
-
+      background: #000;
       .logo-container {
         display: none;
       }
       .options {
-        padding: 0 1em;
+        margin: 1.5em auto;
+        .option {
+          padding: 0 0.4em;
+        }
       }
     }
   }
