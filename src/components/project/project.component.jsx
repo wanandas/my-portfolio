@@ -4,25 +4,30 @@ import "./project.styles.scss";
 
 const ProjectsSection = () => (
   <div className="projects-Section" name="projectsSection">
+    <hr></hr>
+    <h2 className="title">My Project</h2>
     <div className="gallery">
-      <a href="https://i.ibb.co/CHLBZnp/gal2323.jpg">
-        <img src="https://i.ibb.co/CHLBZnp/gal2323.jpg" alt="" />
-      </a>
-      <a href="https://i.ibb.co/4pBbhfY/gal39834.jpg">
-        <img src="https://i.ibb.co/4pBbhfY/gal39834.jpg" alt="" />
-      </a>
-      <a href="https://i.ibb.co/xSnHP7g/gal43884.jpg">
-        <img src="https://i.ibb.co/xSnHP7g/gal43884.jpg" alt="" />
-      </a>
-      <a href="https://i.ibb.co/QN6Bnrb/gal4958.jpg">
-        <img src="https://i.ibb.co/QN6Bnrb/gal4958.jpg" alt="" />
-      </a>
-      <a href="https://i.ibb.co/dGZvj75/gal4545.jpg">
-        <img src="https://i.ibb.co/dGZvj75/gal4545.jpg" alt="" />
-      </a>
-      <a href="https://i.ibb.co/S6FVFNt/gal74744.jpg">
-        <img src="https://i.ibb.co/S6FVFNt/gal74744.jpg" alt="" />
-      </a>
+      <div className="project">
+        <img src="https://i.ibb.co/nM6SGrg/Untitled-2.jpg" alt="" />
+        <div className="project-name">react&redux</div>
+      </div>
+      <div className="project">
+        <img src="https://i.ibb.co/zbM8qdg/Untitled-3.jpg" alt="" />
+        <div className="project-name">Weather API</div>
+      </div>
+      <div className="project">
+        <img src="https://i.ibb.co/gZpK0nG/Untitled-1.jpg" alt="" />
+        <div className="project-name">grid responsive</div>
+      </div>
+
+      <div className="project">
+        <img src="https://i.ibb.co/TPxTN37/Untitled-4.jpg" alt="" />
+        <div className="project-name">piano simple</div>
+      </div>
+      <div className="project">
+        <img src="https://i.ibb.co/KmRnNjG/Untitled-5.jpg" alt="" />
+        <div className="project-name">flex responsive</div>
+      </div>
     </div>
   </div>
 );
