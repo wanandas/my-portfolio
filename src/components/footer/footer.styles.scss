@@ -1,17 +1,15 @@
 .footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   background: rgb(15, 15, 15);
   color: white;
-  flex-direction: column;
-  padding-top: 50px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
   height: 100%;
 
-  hr {
-    width: 70%;
-    margin-bottom: 30px;
+  .copy {
+    margin-bottom: 15px;
   }
   .contain-footer {
     color: white;
@@ -31,6 +29,18 @@
     .fa-github {
       color: white;
       margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    padding-bottom: 10px;
+    .contain-footer {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
     }
   }
 }

@@ -79,3 +79,18 @@
     transform: scaleX(1);
   }
 }
+
+@media (max-width: 700px) {
+  .skills-section {
+    .title {
+      font-size: 30px;
+    }
+    .skills-container {
+      .skills {
+        .skill {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

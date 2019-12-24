@@ -4,8 +4,8 @@ import "./footer.styles.scss";
 
 const FooterSection = () => (
   <div className="footer">
+    <div className="copy">&copy; Copyright 2019, BusyOnFriday</div>
     <div className="contain-footer">
-      <div>&copy; Copyright 2019, BusyOnFriday</div>
       <a href="http://facebook.com/WanFutrue">
         <i className="fab fa-facebook fa-2x"></i>
       </a>
