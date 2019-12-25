@@ -1,0 +1,48 @@
+.projects-Section {
+  background: rgb(15, 15, 15);
+
+  .title {
+    margin-top: 10;
+    color: #eee;
+    font-size: 50px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+  }
+
+  hr {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .projects-Section {
+    .title {
+      font-size: 30px;
+    }
+    .gallery {
+      grid-template-columns: repeat(4, 1fr);
+      .project {
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          grid-column: 3/5;
+        }
+        &:nth-child(4) {
+          display: none;
+        }
+        &:nth-child(5) {
+          grid-column: 3/5;
+        }
+        img {
+          opacity: 1;
+        }
+        .project-name {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

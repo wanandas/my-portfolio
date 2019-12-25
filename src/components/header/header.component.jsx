@@ -1,6 +1,5 @@
 import React from "react";
 
-import { ReactComponent as Logo } from "../../logo.svg";
 import "./header.styles.scss";
 
 import * as Scroll from "react-scroll";
@@ -12,7 +11,7 @@ class Header extends React.Component {
       <div className="header">
         <div className="container">
           <div className="logo-container">
-            <Logo className="logo" to="headerSection" />
+            <div className="logo">BusyOnFriday</div>
           </div>
           <div className="options">
             <Link

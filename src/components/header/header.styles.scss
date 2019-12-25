@@ -6,15 +6,21 @@
   .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     text-transform: uppercase;
 
     .logo-container {
-      height: 2%;
-      width: 2%;
+      height: 3%;
+      width: 3%;
       padding: 25px;
+      font-size: 30px;
       transition: all 0.5s;
+      font-family: "kanit";
+      font-weight: Bold Italic 800;
+      color: rgb(180, 188, 196);
+      text-transform: none;
+
       &:hover {
         transform: scale(1.1);
       }
