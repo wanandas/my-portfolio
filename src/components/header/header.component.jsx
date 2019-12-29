@@ -11,7 +11,15 @@ class Header extends React.Component {
       <div className="header">
         <div className="container">
           <div className="logo-container">
-            <div className="logo">BusyOnFriday</div>
+            <Link
+              className="logo"
+              to="headerSection"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              BusyOnFriday
+            </Link>
           </div>
           <div className="options">
             <Link

@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import Homesection from "./components/homesections/home.components";
+import Homesection from "./components/homesections/home.component";
 import Header from "./components/header/header.component";
 import Aboutsection from "./components/about/about.component";
 import SkillsSection from "./components/skillsSection/skillsSection.component";

@@ -2,10 +2,11 @@ import React from "react";
 
 import "./projectsection.styles.scss";
 import Projects from "../projects/projects.component";
+import Title from "../title/title.component";
 
 class ProjectsSection extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       project: [
@@ -42,7 +43,7 @@ class ProjectsSection extends React.Component {
     return (
       <div className="projects-Section" name="projectsSection">
         <hr></hr>
-        <h2 className="title">My Project</h2>
+        <Title title="My Project" />
         <div className="gallery">
           {this.state.project.map(({ id, img, name }) => (
             <Projects key={id} img={img} name={name} />
