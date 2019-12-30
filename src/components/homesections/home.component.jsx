@@ -1,10 +1,11 @@
 import React from "react";
 
-import { TimelineMax } from "gsap";
+import gsap, { TimelineMax } from "gsap";
 import "./home.styles.scss";
 import ScrollMagic from "scrollmagic";
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 ScrollMagicPluginGsap(ScrollMagic, TimelineMax);
+gsap.registerPlugin(ScrollMagic, TimelineMax);
 
 class Homesection extends React.Component {
   constructor() {
