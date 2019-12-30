@@ -26,7 +26,7 @@ class Homesection extends React.Component {
 
     this.tl.fromTo(
       this.header,
-      1,
+      2,
       { x: -200, opacity: 0 },
       { x: 0, opacity: 1 }
     );
@@ -36,7 +36,7 @@ class Homesection extends React.Component {
       1,
       { x: 200, opacity: 0 },
       { x: 0, opacity: 1 },
-      "=-.7"
+      "=-.9"
     );
   }
 
