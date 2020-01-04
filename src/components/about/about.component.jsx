@@ -18,7 +18,8 @@ class Aboutsection extends React.Component {
 
     this.tl = new TimelineMax();
 
-    this.p = null;
+    this.p1 = null;
+    this.p2 = null;
     this.name = null;
 
     this.pic = null;
@@ -32,7 +33,8 @@ class Aboutsection extends React.Component {
       .addTo(this.controller);
 
     this.tl.from(this.name, 2, { y: -200, opacity: 0, ease: "back" });
-    this.tl.from(this.p, 2, { x: 200, opacity: 0, ease: "back" }, ".5");
+    this.tl.from(this.p1, 2, { x: 200, opacity: 0, ease: "back" }, ".5");
+    this.tl.from(this.p2, 2, { y: 200, opacity: 0, ease: "back" }, ".5");
     this.tl.from(this.pic, 2, { opacity: 0 }, ".8");
   }
 
@@ -50,11 +52,14 @@ class Aboutsection extends React.Component {
           </li>
           <li className="about-right">
             <h3 ref={h3 => (this.name = h3)}>Mr.Wantanawat Jitprakop</h3>
-            <p ref={p => (this.p = p)}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-              ipsa nobis debitis facilis vel, tempora quod eveniet non, deserunt
-              at, deleniti qui quidem delectus odio cupiditate repudiandae
-              voluptas officiis porro.
+            <p ref={p => (this.p1 = p)}>
+              Hello I'm Once , I graduated from Chandrakasem Rajabhat
+              University, majoring in faculty of management science (Business
+              Computer).
+            </p>
+            <p ref={p => (this.p2 = p)}>
+              In my spare time, I enjoy playing Computer Game such as Dota2 ,
+              Tom Clancy's Rainbow Six Siege
             </p>
           </li>
         </ul>

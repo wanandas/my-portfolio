@@ -2,15 +2,11 @@ import React from "react";
 
 import gsap, { TimelineMax } from "gsap";
 import "./home.styles.scss";
-import ScrollMagic from "scrollmagic";
-import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
-ScrollMagicPluginGsap(ScrollMagic, TimelineMax);
-gsap.registerPlugin(ScrollMagic, TimelineMax);
+gsap.registerPlugin(TimelineMax);
 
 class Homesection extends React.Component {
   constructor() {
     super();
-    this.controller = new ScrollMagic.Controller();
 
     this.tl = new TimelineMax();
     this.header = null;
@@ -18,12 +14,6 @@ class Homesection extends React.Component {
   }
 
   componentDidMount() {
-    const scene = new ScrollMagic.Scene({
-      triggerElement: "#header"
-    })
-      .setTween(this.tl)
-      .addTo(this.controller);
-
     this.tl.fromTo(
       this.header,
       2,
@@ -43,10 +33,10 @@ class Homesection extends React.Component {
   render() {
     return (
       <div className="home-section" name="headerSection">
-        <h1 ref={h1 => (this.header = h1)} id="header">
-          Hi, I'm Wantanawat Jitprakop
-        </h1>
-        <span ref={span => (this.span = span)}>looking for job</span>
+        <h1 ref={h1 => (this.header = h1)}>Hi, I'm Wantanawat Jitprakop</h1>
+        <span ref={span => (this.span = span)}>
+          looking for a position as Front-end Developer
+        </span>
       </div>
     );
   }
