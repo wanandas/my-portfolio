@@ -5,9 +5,7 @@ import Title from "../title/title.component";
 
 import gsap, { TimelineMax } from "gsap";
 import ScrollMagic from "scrollmagic";
-import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 
-ScrollMagicPluginGsap(ScrollMagic, TimelineMax);
 gsap.registerPlugin(ScrollMagic, TimelineMax);
 
 class Aboutsection extends React.Component {
@@ -28,9 +26,9 @@ class Aboutsection extends React.Component {
   componentDidMount() {
     const scene = new ScrollMagic.Scene({
       triggerElement: ".about-content"
-    })
-      .setTween(this.tl)
-      .addTo(this.controller);
+    });
+    scene.setTween(this.tl);
+    scene.addTo(this.controller);
 
     this.tl.from(this.name, 2, { y: -200, opacity: 0, ease: "back" });
     this.tl.from(this.p1, 2, { x: 200, opacity: 0, ease: "back" }, ".5");
@@ -54,11 +52,12 @@ class Aboutsection extends React.Component {
             <h3 ref={h3 => (this.name = h3)}>Mr.Wantanawat Jitprakop</h3>
             <p ref={p => (this.p1 = p)}>
               Hello I'm Once , I graduated from Chandrakasem Rajabhat
-              University, majoring in faculty of management science (Business
-              Computer).
+              University, <br></br> majoring in faculty of management science
+              (Business Computer).
             </p>
             <p ref={p => (this.p2 = p)}>
               In my spare time, I enjoy playing Computer Game such as Dota2 ,
+              <br></br>
               Tom Clancy's Rainbow Six Siege
             </p>
           </li>

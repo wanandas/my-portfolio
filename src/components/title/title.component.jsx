@@ -22,11 +22,15 @@ class Title extends React.Component {
   componentDidMount() {
     const scene = new ScrollMagic.Scene({
       triggerElement: this.h2
-    })
-      .setTween(this.tl)
-      .addTo(this.controller);
+    });
+    scene.setTween(this.tl);
+    scene.addTo(this.controller);
 
-    this.tl.from(this.h2, 2, { opacity: 0, ease: "Bounce.easeOut" });
+    this.tl.from(this.h2, 2, {
+      opacity: 0,
+      color: "#80ff00",
+      ease: "Bounce.easeOut"
+    });
   }
 
   render() {
