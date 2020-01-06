@@ -51,9 +51,9 @@ class Aboutsection extends React.Component {
           <li className="about-right">
             <h3 ref={h3 => (this.name = h3)}>Mr.Wantanawat Jitprakop</h3>
             <p ref={p => (this.p1 = p)}>
-              Hello I'm Once , I graduated from Chandrakasem Rajabhat
-              University, <br></br> majoring in faculty of management science
-              (Business Computer).
+              Hello I'm Once , I graduated from Chandrakasem Rajabhat University
+              <br></br>majoring in faculty of management science (Business
+              Computer).
             </p>
             <p ref={p => (this.p2 = p)}>
               In my spare time, I enjoy playing Computer Game such as Dota2 ,
