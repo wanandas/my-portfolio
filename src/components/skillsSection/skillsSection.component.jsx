@@ -2,6 +2,7 @@ import React from "react";
 
 import "./skillsSection.styles.scss";
 import Title from "../title/title.component";
+import Skills from "../skill/skill.component";
 
 class SkillsSection extends React.Component {
   constructor() {
@@ -39,18 +40,7 @@ class SkillsSection extends React.Component {
         <hr></hr>
         <Title title="my skills" id="about" />
         <div className="skills-container">
-          <div className="skills">
-            {this.state.skills.map(({ id, name, skill }) => (
-              <div className="skill" key={id}>
-                <h3 className="skill_type">{name}</h3>
-                <div className="skill__ouuter-bar">
-                  <div
-                    className={`skill__inner-bar skill__inner-bar--${skill}`}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Skills skills={this.state.skills} />
         </div>
       </div>
     );
