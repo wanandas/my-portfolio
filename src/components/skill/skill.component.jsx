@@ -33,7 +33,6 @@ class Skills extends React.Component {
       opacity: 0,
       width: 0
     });
-    console.log(this.bar);
   }
 
   render() {

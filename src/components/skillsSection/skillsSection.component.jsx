@@ -3,47 +3,20 @@ import React from "react";
 import "./skillsSection.styles.scss";
 import Title from "../title/title.component";
 import Skills from "../skill/skill.component";
+import { createStructuredSelector } from "reselect";
+import { selectSkillsList } from "../../redux/skill/skill.selectors";
+import { connect } from "react-redux";
 
-class SkillsSection extends React.Component {
-  constructor() {
-    super();
+const SkillsSection = ({ skills }) => (
+  <div className="skills-section" name="skillsSection">
+    <hr></hr>
+    <Title title="my skills" id="about" />
+    <div className="skills-container">
+      <Skills skills={skills} />
+    </div>
+  </div>
+);
 
-    this.state = {
-      skills: [
-        {
-          id: 1,
-          name: "HTML",
-          skill: 50
-        },
-        {
-          id: 2,
-          name: "CSS",
-          skill: 45
-        },
-        {
-          id: 3,
-          name: "JS",
-          skill: 40
-        },
-        {
-          id: 4,
-          name: "REACT&REDUX",
-          skill: 30
-        }
-      ]
-    };
-  }
+const mapStateToProps = createStructuredSelector({ skills: selectSkillsList });
 
-  render() {
-    return (
-      <div className="skills-section" name="skillsSection">
-        <hr></hr>
-        <Title title="my skills" id="about" />
-        <div className="skills-container">
-          <Skills skills={this.state.skills} />
-        </div>
-      </div>
-    );
-  }
-}
-export default SkillsSection;
+export default connect(mapStateToProps)(SkillsSection);
