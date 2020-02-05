@@ -8,7 +8,7 @@ import SkillsSection from "./components/skillsSection/skillsSection.component";
 import ProjectsSection from "./components/projectsection/projectsection.component";
 import FooterSection from "./components/footer/footer.component";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Header />
@@ -19,6 +19,6 @@ function App() {
       <FooterSection />
     </div>
   );
-}
+};
 
 export default App;

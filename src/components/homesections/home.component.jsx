@@ -1,45 +1,36 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
-import gsap, { TimelineMax } from "gsap";
+import gsap, { TweenMax } from "gsap";
 import "./home.styles.scss";
-gsap.registerPlugin(TimelineMax);
+gsap.registerPlugin(TweenMax);
 
-class Homesection extends React.Component {
-  constructor() {
-    super();
+const Homesection = () => {
+  const aniHeader = useRef(null);
+  const aniSpan = useRef(null);
 
-    this.tl = new TimelineMax();
-    this.header = null;
-    this.span = null;
-  }
-
-  componentDidMount() {
-    this.tl.fromTo(
-      this.header,
+  useEffect(() => {
+    TweenMax.fromTo(
+      aniHeader.current,
       2,
       { x: -200, opacity: 0 },
       { x: 0, opacity: 1 }
     );
 
-    this.tl.fromTo(
-      this.span,
+    TweenMax.fromTo(
+      aniSpan.current,
       1,
       { x: 200, opacity: 0 },
       { x: 0, opacity: 1 },
       "=-.9"
     );
-  }
+  }, []);
 
-  render() {
-    return (
-      <div className="home-section" name="headerSection">
-        <h1 ref={h1 => (this.header = h1)}>Hi, I'm Wantanawat Jitprakop</h1>
-        <span ref={span => (this.span = span)}>
-          looking for a position as Front-end Developer
-        </span>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="home-section" name="headerSection">
+      <h1 ref={aniHeader}>Hi, I'm Wantanawat Jitprakop</h1>
+      <span ref={aniSpan}>looking for a position as Front-end Developer</span>
+    </div>
+  );
+};
 
 export default Homesection;

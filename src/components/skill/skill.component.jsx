@@ -4,54 +4,49 @@ import "./skill.styles.scss";
 import gsap, { TimelineMax } from "gsap";
 
 import ScrollMagic from "scrollmagic";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollMagic, TimelineMax);
 
-class Skills extends React.Component {
-  constructor(props) {
-    super(props);
+const Skills = props => {
+  const skillbar = useRef(null);
+  const bar = [];
 
-    this.controller = new ScrollMagic.Controller();
-    this.tl = new TimelineMax();
-
-    this.bar = [];
-    this.skillbar = null;
-  }
-
-  componentDidMount() {
+  useEffect(() => {
+    const controller = new ScrollMagic.Controller();
+    const tl = new TimelineMax();
     const scene = new ScrollMagic.Scene({
       triggerElement: ".skills"
     });
-    scene.setTween(this.tl);
-    scene.addTo(this.controller);
+    scene.setTween(tl);
+    scene.addTo(controller);
 
-    this.tl.from(this.skillbar, 2, {
+    tl.from(skillbar.current, 2, {
       opacity: 0
     });
 
-    this.tl.from(this.bar, 1, {
+    tl.from(bar, 1, {
       opacity: 0,
       width: 0
     });
-  }
+  });
 
-  render() {
-    return (
-      <div className="skills" ref={skillbar => (this.skillbar = skillbar)}>
-        {this.props.skills.map(({ id, name, skill }, scene) => (
-          <div className="skill" key={id}>
-            <h3 className="skill_type">{name}</h3>
-            <div className="skill__ouuter-bar">
-              <div
-                ref={el => (this.bar[scene] = el)}
-                className={`skill__inner-bar skill__inner-bar--${skill}`}
-              ></div>
-            </div>
+  return (
+    <div className="skills" ref={skillbar}>
+      {props.skills.map(({ id, name, skill }, scene) => (
+        <div className="skill" key={id}>
+          <h3 className="skill_type">{name}</h3>
+          <div className="skill__ouuter-bar">
+            <div
+              ref={el => (bar[scene] = el)}
+              className={`skill__inner-bar skill__inner-bar--${skill}`}
+            ></div>
           </div>
-        ))}
-      </div>
-    );
-  }
-}
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export default Skills;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./title.styles.scss";
 
 import gsap, { TimelineMax } from "gsap";
@@ -9,37 +9,30 @@ import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 ScrollMagicPluginGsap(ScrollMagic, TimelineMax);
 gsap.registerPlugin(ScrollMagic, TimelineMax);
 
-class Title extends React.Component {
-  constructor() {
-    super();
+const Title = props => {
+  const aniH2 = useRef(null);
 
-    this.controller = new ScrollMagic.Controller();
-    this.tl = new TimelineMax();
-
-    this.h2 = null;
-  }
-
-  componentDidMount() {
+  useEffect(() => {
+    const tl = new TimelineMax();
+    const controller = new ScrollMagic.Controller();
     const scene = new ScrollMagic.Scene({
-      triggerElement: this.h2
+      triggerElement: aniH2.current
     });
-    scene.setTween(this.tl);
-    scene.addTo(this.controller);
+    scene.setTween(tl);
+    scene.addTo(controller);
 
-    this.tl.from(this.h2, 2, {
+    tl.from(aniH2.current, 2, {
       opacity: 0,
       color: "#80ff00",
       ease: "Bounce.easeOut"
     });
-  }
+  });
 
-  render() {
-    return (
-      <h2 className="title" ref={id => (this.h2 = id)}>
-        {this.props.title}
-      </h2>
-    );
-  }
-}
+  return (
+    <h2 className="title" ref={aniH2}>
+      {props.title}
+    </h2>
+  );
+};
 
 export default Title;
